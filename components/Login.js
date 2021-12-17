@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Info from './Info';
 
 import { useMoralis } from 'react-moralis';
 
