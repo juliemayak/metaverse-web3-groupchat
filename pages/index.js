@@ -15,7 +15,7 @@ export default function Home() {
       </>
     );
   return (
-    <div className="h-screen overflow-y-scroll bg-gradient-to-b from-black to-fuchsia-900 overflow-hidden">
+    <div className="h-screen overflow-y-scroll bg-gradient-to-b from-fuchsia-900 to-black overflow-hidden">
       <Head>
         <title>Metaverse</title>
         <link rel="icon" href="/favicon.ico" />
@@ -28,14 +28,7 @@ export default function Home() {
       <div className="max-w-screen-2xl mx-auto">
         <Header />
         <Messages />
-        {/* messages */}
       </div>
-      {/* <button
-        onClick={logout}
-        className="rounded-lg text-xl bg-fuchsia-800 p-4 w-[200px] ml-3 font-thin text-white"
-      >
-        Logout
-      </button> */}
     </div>
   );
 }

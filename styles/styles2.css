@@ -1,0 +1,102 @@
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15rem solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15rem; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 485px;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+/* START ANIMATION */
+
+.move_up {
+  /* transform: translateY(-100%); */
+  transition: transform;
+  animation: moving-up 3s forwards 1.5s;
+}
+@keyframes moving-up {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.move_down {
+  transition: transform;
+  animation: moving-down 3s forwards 1.5s;
+}
+
+@keyframes moving-down {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+/* SCALE PICTURE ANIMATION */
+.pic_scale {
+  animation: scale 0.5s ease-out 3s forwards;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(0.6);
+  }
+}
+
+/* move img up */
+.move-img {
+  animation: movepic 0.5s ease-out 3s forwards;
+}
+@keyframes movepic {
+  to {
+    transform: translateY(-150px);
+  }
+}
+
+/* show button */
+.appear {
+  animation: show-btn 0.15s ease-in 3.8s forwards, scale-btn 0.15s ease-in 3.8s forwards;
+}
+@keyframes show-btn {
+  from {
+    z-index: 0;
+  }
+  to {
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+@keyframes scale-btn {
+  from {
+    transform: scale(100);
+  }
+  to {
+    transform: scale(1);
+  }
+}

@@ -34,7 +34,7 @@ function SendMessage({ endOfMessagesRef }) {
     <form className="flex fixed bottom-10 bg-black opacity-50 w-11/12 px-6 py-4 max-w-2xl shadow-xl rounded-full border-4 border-pink-400">
       <input
         type="text"
-        className="outline-none bg-transparent text-white  placeholder-gray-400 flex-grow pr-5"
+        className="outline-none bg-transparent text-white  placeholder-gray-400 flex-grow pr-5 "
         placeholder={`Enter a Message ${user.getUsername()}...`}
         value={message}
         onChange={(e) => setMessage(e.target.value)}

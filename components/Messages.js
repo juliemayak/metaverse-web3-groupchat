@@ -6,6 +6,11 @@ import Message from './Message';
 const MINS_DURATION = 15;
 
 function Messages() {
+  //font
+  const styles = {
+    fontFamily: 'Montserrat'
+  };
+
   const { user } = useMoralis();
   const endOfMessagesRef = useRef(null);
   const { data, loading, error } = useMoralisQuery(
@@ -20,7 +25,7 @@ function Messages() {
     }
   );
   return (
-    <div className="pb-56">
+    <div style={styles} className="pb-56">
       <div className="my-5">
         <ByMoralis variant="dark" style={{ marginLeft: 'auto', marginRight: 'auto' }} />
       </div>
