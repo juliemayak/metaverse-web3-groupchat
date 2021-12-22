@@ -7,13 +7,7 @@ import Messages from '../components/Messages';
 
 export default function Home() {
   const { isAuthenticated } = useMoralis();
-  if (!isAuthenticated)
-    return (
-      <>
-        <Login />
-        <Info />
-      </>
-    );
+  if (!isAuthenticated) return <Login />;
   return (
     <div className="h-screen overflow-y-scroll bg-gradient-to-b from-fuchsia-900 to-black overflow-hidden">
       <Head>

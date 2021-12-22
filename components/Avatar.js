@@ -7,7 +7,7 @@ function Avatar({ username, logoutOnPress }) {
     <Image
       layout="fill"
       objectFit="cover"
-      src={`https://avatars.dicebear.com/api/pixel-art/${username || user.get('username')}.svg`}
+      src={`https://avatars.dicebear.com/api/pixel-art/${username || user?.get('username')}.svg`}
       onClick={() => logoutOnPress && logout()}
       className="rounded-full bg-black cursor-pointer "
     />

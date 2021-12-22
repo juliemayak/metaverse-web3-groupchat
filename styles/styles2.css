@@ -1,3 +1,6 @@
+body {
+  background-color: black;
+}
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15rem solid white; /* The typwriter cursor */
@@ -27,12 +30,12 @@
     border-color: white;
   }
 }
+
 /* START ANIMATION */
 
 .move_up {
-  /* transform: translateY(-100%); */
   transition: transform;
-  animation: moving-up 3s forwards 1.5s;
+  animation: moving-up 3s forwards 2s;
 }
 @keyframes moving-up {
   from {
@@ -40,12 +43,13 @@
   }
   to {
     transform: translateY(-100%);
+    z-index: 0;
   }
 }
 
 .move_down {
   transition: transform;
-  animation: moving-down 3s forwards 1.5s;
+  animation: moving-down 3s forwards 2s;
 }
 
 @keyframes moving-down {
@@ -54,33 +58,34 @@
   }
   to {
     transform: translateY(100%);
+    z-index: 0;
   }
 }
 
 /* SCALE PICTURE ANIMATION */
 .pic_scale {
-  animation: scale 0.5s ease-out 3s forwards;
+  animation: scale 0.5s ease-out 3.5s forwards;
 }
 
 @keyframes scale {
   to {
-    transform: scale(0.6);
+    transform: scale(0.55);
   }
 }
 
 /* move img up */
 .move-img {
-  animation: movepic 0.5s ease-out 3s forwards;
+  animation: movepic 0.5s ease-out 3.5s forwards;
 }
 @keyframes movepic {
   to {
-    transform: translateY(-150px);
+    transform: translateY(-120px);
   }
 }
 
 /* show button */
 .appear {
-  animation: show-btn 0.15s ease-in 3.8s forwards, scale-btn 0.15s ease-in 3.8s forwards;
+  animation: show-btn 0.15s ease-in 4.5s forwards, scale-btn 0.15s ease-out 4.5s forwards;
 }
 @keyframes show-btn {
   from {
@@ -98,5 +103,46 @@
   }
   to {
     transform: scale(1);
+  }
+}
+
+/* message sliding*/
+
+.move-msg:last-child {
+  animation: slideUpAndRight 0.167s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUpAndRight {
+  from {
+    transform: translateX(-20%) translateY(10%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/* hide header*/
+.slideHeaderUp {
+  animation: hideUp 1.5s ease-in forwards;
+}
+@keyframes hideUp {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-90%);
+  }
+}
+
+/* show header */
+.slideHeaderDown {
+  animation: hideDown 1.5s ease-out forwards;
+}
+@keyframes hideDown {
+  from {
+    transform: translateY(-90%);
+  }
+  to {
+    transform: translateY(0%);
   }
 }
