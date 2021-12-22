@@ -1,11 +1,8 @@
 import Accordion from './Accordion';
 
 function Info() {
-  const styles = {
-    fontFamily: 'Montserrat'
-  };
   return (
-    <div style={styles} className="bg-black w-full h-auto pb-[100px] relative">
+    <div className="bg-black w-full h-auto pb-[100px] relative">
       <h1 className="text-white text-center text-[48px] font-thin pt-14">
         Connection is evolving and so are we.
       </h1>

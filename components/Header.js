@@ -8,13 +8,10 @@ import { useState } from 'react';
 
 function Header() {
   const { user, logout } = useMoralis();
-  const styles = {
-    fontFamily: 'Montserrat'
-  };
+
   const [hideHeader, setHideHeader] = useState(false);
   return (
     <div
-      style={styles}
       className={`sticky top-0 p-5 z-50 bg-[#2d252f] bg-opacity-75 shadow-sm border-b-2 border-pink-500 text-pink-500 ${
         hideHeader ? 'slideHeaderUp' : 'slideHeaderDown'
       }`}

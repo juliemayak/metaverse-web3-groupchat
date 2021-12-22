@@ -3,11 +3,12 @@ import { useState } from 'react';
 import LoginIcon from '@mui/icons-material/Login';
 
 function Signup() {
-  const { signup } = useMoralis();
+  const { signup, error } = useMoralis();
   // signup state
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   return (
     <form className="flex flex-col justify-center items-center space-y-4 w-[250px]">
       <h1 className="text-white text-2xl mb-8">SIGN UP</h1>
