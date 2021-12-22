@@ -5,14 +5,12 @@ import { useMoralis } from 'react-moralis';
 import CloseIcon from '@mui/icons-material/Close';
 // signin
 import Signin from './Signin';
-import Loading from './Loading';
 
 function Login() {
   const styles = {
     fontFamily: 'Montserrat'
   };
-  const { authenticate, isAuthenticating } = useMoralis();
-  const { isAuthenticating } = useMoralis();
+  const { authenticate } = useMoralis();
 
   const [btnText, setBtnText] = useState('Connect with a wallet');
   // show signin and signup
@@ -86,7 +84,6 @@ function Login() {
           <source src="video/metaverse3.mp4" type="video/mp4" />
         </video>
       </div>
-      {isAuthenticating && <Loading />}
     </div>
   );
 }
