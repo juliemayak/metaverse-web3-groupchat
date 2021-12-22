@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Login from '../components/Login';
 import { useMoralis } from 'react-moralis';
-import Info from '../components/Info';
 import Header from '../components/Header';
 import Messages from '../components/Messages';
 

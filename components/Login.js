@@ -11,7 +11,7 @@ function Login() {
     fontFamily: 'Montserrat'
   };
   const { authenticate } = useMoralis();
-
+  //change button text
   const [btnText, setBtnText] = useState('Connect with a wallet');
   // show signin and signup
   const [showSignin, setShowSignin] = useState(false);

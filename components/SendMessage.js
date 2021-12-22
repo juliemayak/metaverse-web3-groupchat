@@ -36,7 +36,7 @@ function SendMessage({ endOfMessagesRef }) {
         type="text"
         className="outline-none bg-transparent text-pink-100
         placeholder-pink-300 flex-grow pr-5 "
-        placeholder={`Enter a Message ${user?.getUsername()}...`}
+        placeholder={`Enter a Message ${user.getUsername()}...`}
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
