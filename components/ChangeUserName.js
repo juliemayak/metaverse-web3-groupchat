@@ -4,7 +4,7 @@ import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutl
 function ChangeUserName() {
   const { user, setUserData, isUserUpdating, userError } = useMoralis();
   const setUserName = () => {
-    const username = prompt(`Enter your Username (current: ${user.getUsername()})`);
+    const username = prompt(`Enter your Username (current: ${user?.getUsername()})`);
     if (!username) return;
     setUserData({
       username

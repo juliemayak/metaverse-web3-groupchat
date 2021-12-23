@@ -4,7 +4,7 @@ import LoginIcon from '@mui/icons-material/Login';
 import Signup from './Signup';
 
 function Login() {
-  const { login, error } = useMoralis();
+  const { login, isAuthenticated, user } = useMoralis();
 
   // signup state
   const [username, setUsername] = useState('');
@@ -19,7 +19,10 @@ function Login() {
       {showSignup ? (
         <Signup />
       ) : (
-        <form className="flex flex-col justify-center items-center space-y-4 w-[250px]">
+        <form
+          className="flex flex-col justify-center items-center space-y-4 w-[250px]"
+          onSubmit={(e) => e.preventDefault()}
+        >
           <h1 className="text-white text-2xl mb-8">SIGN IN</h1>
           <input
             type="text"

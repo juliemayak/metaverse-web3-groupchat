@@ -10,7 +10,10 @@ function Signup() {
   const [password, setPassword] = useState('');
 
   return (
-    <form className="flex flex-col justify-center items-center space-y-4 w-[250px]">
+    <form
+      className="flex flex-col justify-center items-center space-y-4 w-[250px]"
+      onSubmit={(e) => e.preventDefault()}
+    >
       <h1 className="text-white text-2xl mb-8">SIGN UP</h1>
       <input
         type="text"

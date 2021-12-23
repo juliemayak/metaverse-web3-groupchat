@@ -7,7 +7,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useState } from 'react';
 
 function Header() {
-  const { user, logout } = useMoralis();
+  const { user, logout, isAuthenticating } = useMoralis();
 
   const [hideHeader, setHideHeader] = useState(false);
   return (

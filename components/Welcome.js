@@ -7,7 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Login from './Login';
 
 function Welcome() {
-  const { authenticate } = useMoralis();
+  const { authenticate, isAuthenticated, user } = useMoralis();
   //change button text
   const [btnText, setBtnText] = useState('Connect with a wallet');
   // show signin and signup
