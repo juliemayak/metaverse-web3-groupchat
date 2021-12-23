@@ -14,7 +14,8 @@ function SendMessage({ endOfMessagesRef }) {
       .save({
         message,
         username: user.getUsername(),
-        ethAddress: user.get('ethAddress')
+        ethAddress: user.get('ethAddress'),
+        email: user.getEmail()
       })
       .then(
         (message) => {
