@@ -35,9 +35,11 @@ function Header() {
             </div>
             <Avatar logoutOnPress />
           </div>
-          <h1 className="text-2xl md:text-3xl inline-block pt-2 typewriter">
-            WELCOME TO THE METAVERSE
-          </h1>
+          <div className="inline-block">
+            <h1 className="text-2xl md:text-3xl inline-block pt-2 typewriter">
+              WELCOME TO THE METAVERSE
+            </h1>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold p-2 mb-3 truncate">
             {user?.getUsername()}
           </h2>
