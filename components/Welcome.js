@@ -22,6 +22,7 @@ function Welcome() {
             height={400}
             width={400}
             className="object-cover rounded-full pic_scale"
+            priority={true}
           />
         </div>
         <button
