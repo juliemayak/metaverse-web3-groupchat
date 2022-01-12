@@ -11,7 +11,7 @@ function Welcome() {
   //change button text
   const [btnText, setBtnText] = useState('Connect with a wallet');
   // show signin and signup
-  const [showSignin, setShowSignin] = useState(false);
+  const [showSignin, setShowSignin] = useState((c) => false);
 
   return (
     <div className="relative pointer-events-none overflow-hidden">
@@ -78,6 +78,7 @@ function Welcome() {
           autoPlay
           muted
           loop
+          playsInline
         >
           <source src="video/metaverse3.mp4" type="video/mp4" />
         </video>
