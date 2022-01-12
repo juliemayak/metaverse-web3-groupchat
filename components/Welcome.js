@@ -11,7 +11,7 @@ function Welcome() {
   //change button text
   const [btnText, setBtnText] = useState('Connect with a wallet');
   // show signin and signup
-  const [showSignin, setShowSignin] = useState((c) => false);
+  const [showSignin, setShowSignin] = useState();
 
   return (
     <div className="relative pointer-events-none overflow-hidden">
